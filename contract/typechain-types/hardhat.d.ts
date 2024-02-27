@@ -37,6 +37,14 @@ declare module "hardhat/types/runtime" {
       name: "LavaEvmosIpRPCDistribution",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.LavaEvmosIpRPCDistribution__factory>;
+    getContractFactory(
+      name: "LavaAxelarIpRPCDistribution",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.LavaAxelarIpRPCDistribution__factory>;
+    getContractFactory(
+      name: "LavaNearIpRPCDistribution",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.LavaNearIpRPCDistribution__factory>;
 
     getContractAt(
       name: "IERC20Permit",
@@ -68,6 +76,16 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.LavaEvmosIpRPCDistribution>;
+    getContractAt(
+      name: "LavaAxelarIpRPCDistribution",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.LavaAxelarIpRPCDistribution>;
+    getContractAt(
+      name: "LavaNearIpRPCDistribution",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.LavaNearIpRPCDistribution>;
 
     deployContract(
       name: "IERC20Permit",
@@ -93,6 +111,14 @@ declare module "hardhat/types/runtime" {
       name: "LavaEvmosIpRPCDistribution",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.LavaEvmosIpRPCDistribution>;
+    deployContract(
+      name: "LavaAxelarIpRPCDistribution",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.LavaAxelarIpRPCDistribution>;
+    deployContract(
+      name: "LavaNearIpRPCDistribution",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.LavaNearIpRPCDistribution>;
 
     deployContract(
       name: "IERC20Permit",
@@ -124,6 +150,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.LavaEvmosIpRPCDistribution>;
+    deployContract(
+      name: "LavaAxelarIpRPCDistribution",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.LavaAxelarIpRPCDistribution>;
+    deployContract(
+      name: "LavaNearIpRPCDistribution",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.LavaNearIpRPCDistribution>;
 
     // default types
     getContractFactory(

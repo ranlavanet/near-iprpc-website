@@ -34,18 +34,18 @@ const Navbar = () => {
                     <span>Lava Network</span>
                   </span>
                 </Link>
-                <Link href="https://axelar.network/" target="_blank">
+                <Link href="https://near.org/" target="_blank">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <Image
-                        src="/img/channels4_profile.jpg"
+                        src="/img/ef3ad80e423a4449ab8e961b0d1edea4.png"
                         alt="N"
                         width="32"
                         height="32"
                         className="w-8"
                       />
                     </span>
-                    <span>Axelar Network</span>
+                    <span>Near Network</span>
                   </span>
                 </Link>
 

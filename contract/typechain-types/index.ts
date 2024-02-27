@@ -18,3 +18,5 @@ export type { LavaAxelarIpRPCDistribution } from "./contracts/LavaAxelarIpRPCDis
 export { LavaAxelarIpRPCDistribution__factory } from "./factories/contracts/LavaAxelarIpRPCDistribution__factory";
 export type { LavaEvmosIpRPCDistribution } from "./contracts/LavaEvmosIpRPCDistribution";
 export { LavaEvmosIpRPCDistribution__factory } from "./factories/contracts/LavaEvmosIpRPCDistribution__factory";
+export type { LavaNearIpRPCDistribution } from "./contracts/LavaNearIpRPCDistribution.sol/LavaNearIpRPCDistribution";
+export { LavaNearIpRPCDistribution__factory } from "./factories/contracts/LavaNearIpRPCDistribution.sol/LavaNearIpRPCDistribution__factory";
