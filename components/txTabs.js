@@ -6,7 +6,7 @@ import Web3 from "web3"
 import { LavaAxelarIpRPCDistribution__factory } from "../contract/typechain-types"
 import { ContractAddress } from "./utils"
 import PayProvidersComponent from "./payProviders"
-import { ERC20TokenAddress, minABI} from "./utils";
+import { ERC20TokenAddress, minABI, convertERCDecimalToBalance} from "./utils";
 
 const tabStyle = { minHeight: '650px', minWidth: '500px'}
 
@@ -58,7 +58,7 @@ async function fundSmartContract(inputValue) {
     if (window.ethereum) {
         if (window.ethereum.isConnected()) {
             const wallet = new Web3(window.ethereum);
-            inputValue = wallet.utils.toWei(inputValue, "mwei")
+            inputValue = wallet.utils.toWei(inputValue, "mether")
             const myContract = new wallet.eth.Contract(LavaAxelarIpRPCDistribution__factory.abi, ContractAddress);
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
             const fromAccount = accounts[0];

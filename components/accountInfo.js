@@ -16,8 +16,9 @@ const AccountInfo = () => {
         if (connectedAccount) {
           setConnectedAccount(connectedAccount);
           let contract = new web3.eth.Contract(minABI, ERC20TokenAddress);
-          let balanceAx = await getBalance(contract, connectedAccount);
-          const balanceERC = convertERCBalanceToDecimal(web3, balanceAx)
+          let balanceErc = await getBalance(contract, connectedAccount);
+          console.log("Got Balnce", balanceErc)
+          const balanceERC = convertERCBalanceToDecimal(web3, balanceErc)
           setBalance(balanceERC);
         }
       } else {

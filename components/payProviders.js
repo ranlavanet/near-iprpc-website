@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ParsedDataComponent from "./parsedJsonData"
 import PaymentJsonShowBox from "./paymentJsonAmount"
 import Web3 from "web3"
-import { LavaAxelarIpRPCDistribution__factory } from "../contract/typechain-types/factories/contracts/LavaAxelarIpRPCDistribution__factory.ts"
+import { LavaNearIpRPCDistribution__factory } from "../contract/typechain-types/factories/contracts/LavaNearIpRPCDistribution.sol/LavaNearIpRPCDistribution__factory.ts"
 import FileInputComponent from "./fileInput";
 import EditableInputComponent from "./paymentAmount"
 import { ethers } from "ethers";
-import { ERC20TokenAddress, minABI, getBalance, convertERCBalanceToDecimal, ContractAddress} from "./utils";
+import { ERC20TokenAddress, minABI, getBalance, ContractAddress} from "./utils";
 
 const PayProvidersComponent = () => {
     const [uploadedData, setUploadedData] = useState(null);
@@ -206,7 +206,7 @@ async function payProviders(uploadedData, amountToPay) {
     if (window.ethereum) {
         if (window.ethereum.isConnected()) {
             const wallet = new Web3(window.ethereum);
-            const myContract = new wallet.eth.Contract(LavaAxelarIpRPCDistribution__factory.abi, ContractAddress);
+            const myContract = new wallet.eth.Contract(LavaNearIpRPCDistribution__factory.abi, ContractAddress);
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
             const fromAccount = accounts[0];
 
