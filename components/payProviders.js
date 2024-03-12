@@ -103,6 +103,9 @@ function parseCsvFields(uploadedData, amountToPay) {
             continue;
         }
         let address = i['Wallet Address']
+        if (!address || address == "") {
+            address = i['Wallet']
+        }
         let percentage = i['Percentage']
         if (address == "" || percentage == "") {
             if (!alertOnce) {
@@ -114,7 +117,10 @@ function parseCsvFields(uploadedData, amountToPay) {
         if (!address || !percentage) {
             console.log(i)
             console.log(address, percentage)
-            alert("couldn't find one of the fields 'Wallet Address' and 'Percentage'");
+            if (!alertOnce) {
+                alertOnce = true;
+                alert("couldn't find one of the fields 'Wallet Address' and 'Percentage'");
+            }
             continue;
         }
         if (percentage == "") {
